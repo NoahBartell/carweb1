@@ -12,7 +12,7 @@ node('App-Server-CWEB2140')
     }
     stage('Post to Docker Hub')
     {
-        docker.withRegistry('https://registry.hub.docker.com', 'dckr_pat_zsb9hevPixc9OvJtzhR0CrdhlyY')
+        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials')
         {
             app.push("latest")
         }
